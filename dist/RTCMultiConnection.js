@@ -174,7 +174,7 @@ var RTCMultiConnection = function(roomid, forceOptions) {
         }
 
         try {
-            connection.socket = io(connection.socketURL + parameters);
+            connection.socket = io(connection.socketURL + parameters, connection.socketOptions);
         } catch (e) {
             connection.socket = io.connect(connection.socketURL + parameters, connection.socketOptions);
         }
